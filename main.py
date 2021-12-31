@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-
-
 import ovh
 from tinydb import TinyDB, Query
 from os.path import join, dirname
