@@ -8,7 +8,7 @@ from requests import get
 from re import search
 from sys import argv
 
-DB = "config.json"
+DB = join(dirname(argv[0]), "config.json")
 
 # Création de la base de donnée TinyDB
 
@@ -56,7 +56,7 @@ if not domain["name"]:
     print("Please fill in the 'ovh/domain/name' variable")
     errors += 1
 if errors > 0:
-    print(f"Configure the '{join(dirname(argv[0]), DB)}' file")
+    print(f"Configure the '{DB}' file")
     exit()
 
 # Authentification sur l'API d'OVH
